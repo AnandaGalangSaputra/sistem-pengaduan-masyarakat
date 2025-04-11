@@ -2,6 +2,11 @@
 
 Proyek frontend sederhana untuk sistem pengaduan masyarakat menggunakan HTML, CSS, dan JavaScript vanilla.
 
+![alt text](https://github.com/AnandaGalangSaputra/sistem-pengaduan-masyarakat/blob/main/Sreenshoot/1.PNG?raw=true)
+![alt text](https://github.com/AnandaGalangSaputra/sistem-pengaduan-masyarakat/blob/main/Sreenshoot/2.PNG?raw=true)
+![alt text](https://github.com/AnandaGalangSaputra/sistem-pengaduan-masyarakat/blob/main/Sreenshoot/3.PNG?raw=true)
+
+
 ## Fitur
 
 - **Responsive Design**: Tampilan yang responsif untuk desktop dan mobile
