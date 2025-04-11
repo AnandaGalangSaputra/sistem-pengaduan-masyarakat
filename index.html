@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Sistem Pengaduan Masyarakat - Sampaikan keluhan Anda untuk pelayanan yang lebih baik">
+    <title>Form Pengaduan Masyarakat</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="./styles.css">
+</head>
+
+<body>
+
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="#">Sistem Pengaduan</a>
+            </div>
+            <div class="nav-links">
+                <a href="#" class="active">Beranda</a>
+                <a href="#form-pengaduan">Pengaduan</a>
+                <a href="#">Kontak</a>
+            </div>
+            <div class="nav-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <div class="background-box"></div>
+
+        <div class="container">
+            
+            <div class="header-section">
+                <h1>Pengaduan Masyarakat</h1>
+                <p>Sampaikan keluhan Anda untuk pelayanan yang lebih baik</p>
+                <div class="header-line"></div>
+            </div>
+
+            <section id="form-pengaduan">
+                <div class="form-box">
+                    <h1 class="form-title">Sampaikan Keluhan Anda 👇</h1>
+                    <form>
+                        <div class="form-group">
+                            <label for="nama">Nama Lengkap</label>
+                            <input type="text" id="nama" name="nama" required>
+                        </div>
+    
+                        <div class="form-group">
+                            <label for="keluhan">Keluhan</label>
+                            <textarea id="keluhan" name="keluhan" placeholder="Masukan keluhan anda disini" required></textarea>
+                        </div>
+    
+                        <div class="form-group">
+                            <label for="kategori">Kategori</label>
+                            <select id="kategori" name="kategori" required>
+                                <option value="">Pilih Kategori</option>
+                                <option value="infrastruktur">Infrastruktur</option>
+                                <option value="pelayanan">Pelayanan Publik</option>
+                                <option value="keamanan">Keamanan</option>
+                                <option value="lingkungan">Lingkungan</option>
+                                <option value="lainnya">Lainnya</option>
+                            </select>
+                        </div>
+    
+                        <div class="form-group">
+                            <label>Identitas</label>
+                            <div class="radio-group">
+                                <div class="radio-option">
+                                    <label for="anonim">Anonim</label>
+                                    <input type="radio" id="anonim" name="identitas" value="anonim" checked>
+                                </div>
+                                <div class="radio-option">
+                                    <label for="terbuka">Terbuka</label>
+                                    <input type="radio" id="terbuka" name="identitas" value="terbuka">
+                                </div>
+                            </div>
+                        </div>
+    
+                        <div class="form-group">
+                            <label for="tanggal">Tanggal Kejadian</label>
+                            <input type="date" id="tanggal" name="tanggal" required>
+                        </div>
+    
+                        <button type="submit" class="submit-btn" onclick="validateForm(event)">Kirim Pengaduan</button>
+                    </form>
+                </div>
+            </section>
+        </div>
+
+        <div class="process-steps">
+            <div class="step">
+                <div class="step-icon">
+                    <i class="fas fa-edit"></i>
+                </div>
+                <div class="step-content">
+                    <h3>Tulis Laporan</h3>
+                    <p>Laporkan keluhan atau aspirasi anda dengan jelas dan lengkap</p>
+                </div>
+            </div>
+
+            <div class="step">
+                <div class="step-icon">
+                    <i class="fas fa-check-circle"></i>
+                </div>
+                <div class="step-content">
+                    <h3>Proses Verifikasi</h3>
+                    <p>Dalam 3 hari, laporan Anda akan diverifikasi dan diteruskan kepada instansi berwenang</p>
+                </div>
+            </div>
+
+            <div class="step">
+                <div class="step-icon">
+                    <i class="fas fa-tasks"></i>
+                </div>
+                <div class="step-content">
+                    <h3>Proses Tindak Lanjut</h3>
+                    <p>Dalam 5 hari, instansi akan menindaklanjuti dan membalas laporan Anda</p>
+                </div>
+            </div>
+
+            <div class="step">
+                <div class="step-icon">
+                    <i class="fas fa-comments"></i>
+                </div>
+                <div class="step-content">
+                    <h3>Beri Tanggapan</h3>
+                    <p>Anda dapat menanggapi kembali balasan yang diberikan oleh instansi dalam waktu 10 hari</p>
+                </div>
+            </div>
+
+            <div class="step">
+                <div class="step-icon">
+                    <i class="fas fa-flag-checkered"></i>
+                </div>
+                <div class="step-content">
+                    <h3>Selesai</h3>
+                    <p>Laporan Anda akan terus ditindaklanjuti hingga terselesaikan</p>
+                </div>
+            </div>
+        </div>
+        <div class="cta-section">
+            <a href="#" class="cta-button primary-outline-btn">Cari Tahu Selengkapnya Yuk ✋</a>
+        </div>
+
+
+        <section id="jumlah-laporan" class="stats-section">
+            <div class="stats-container">
+                <div class="stats-item">
+                    <div class="stats-number" data-target="1200">0</div>
+                    <div class="stats-label">Total Laporan Masuk</div>
+                </div>
+                <div class="stats-item">
+                    <div class="stats-number" data-target="890">0</div>
+                    <div class="stats-label">Laporan Selesai</div>
+                </div>
+                <div class="stats-item">
+                    <div class="stats-number" data-target="344">0</div>
+                    <div class="stats-label">Laporan Dalam Proses</div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="social-links">
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+                <a href="#"><i class="fab fa-github"></i></a>
+            </div>
+            <p class="copyright">&copy; 2024 Galang. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="./script.js"></script>
+
+</body>
+
+</html>
